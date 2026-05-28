@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .icon-label i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="img/LogoUiTM.png" alt="Profile Header" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h2><i class="fa-solid fa-user-graduate"></i> Student Profile</h2>
+        <form action="ProfileServlet" method="post" enctype="multipart/form-data">
+            <label class="icon-label"><i class="fa-solid fa-user"></i> Name:</label>
+            <input type="text" name="name" required>
+
+            <label class="icon-label"><i class="fa-solid fa-id-card"></i> Student ID:</label>
+            <input type="text" name="studentId" required>
+
+            <label class="icon-label"><i class="fa-solid fa-book"></i> Program:</label>
+            <input type="text" name="program" required>
+
+            <label class="icon-label"><i class="fa-solid fa-envelope"></i> Email:</label>
+            <input type="email" name="email" required>
+
+            <label class="icon-label"><i class="fa-solid fa-heart"></i> Hobbies:</label>
+            <input type="text" name="hobbies">
+
+            <label class="icon-label"><i class="fa-solid fa-comment"></i> Self Introduction:</label>
+            <textarea name="intro" rows="4"></textarea>
+            
+            <label class="icon-label"><i class="fa-solid fa-image"></i> Profile Photo:</label>
+            <input type="file" name="photo" accept="image/*">
+
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+</body>
+</html>
